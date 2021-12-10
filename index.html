@@ -27,17 +27,60 @@
       <div class="row row-cols-2">
          <div class="col">
             <div class="py-3"></div>
+
             <button class="btn game-big-button">
                <span class="gradient-text-design">
                   PLAY GAME
                </span>
             </button>
             <div class="py-5"></div>
-            <button class="btn game-big-button">
+
+            <!-- Button trigger modal -->
+            <button class="btn game-big-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                <span class="gradient-text-design">
                   VIEW RULES
                </span>
             </button>
+
+            <!-- Modal For Rules -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+               aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Game Rules</h5>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body p-0">
+                        <div class="py-5 px-3 bg-blue">
+                           <div class="row row-cols-1 row-cols-md-2">
+                              <div class="col">
+                                 <div class="d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/heroimage.png" alt="rules image" class="img-fluid">
+                                 </div>
+                              </div>
+                              <div class="col">
+                                 <div class="pt-3 px-md-5 fs-5">
+                                    <ul class="list-group">
+                                       <li class="list-group-item">Rock Beats Siscssors</li>
+                                       <li class="list-group-item">Rock Beats Lizard</li>
+                                       <li class="list-group-item">Lizard Beats Spock</li>
+                                       <li class="list-group-item">Lizard Beats Paper</li>
+                                       <li class="list-group-item">Paper Beats Rock</li>
+                                       <li class="list-group-item">Spock Beats Siscssors</li>
+                                       <li class="list-group-item">Spock Beats Rock</li>
+                                       <li class="list-group-item">Siscssors Beats Paper</li>
+                                       <li class="list-group-item">Siscssors Beats Lizard</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
          </div>
          <div class="col">
             <div class="d-flex align-items-center justify-content-end">
