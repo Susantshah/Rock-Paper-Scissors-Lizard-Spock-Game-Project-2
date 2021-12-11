@@ -23,14 +23,14 @@
          </a>
          <div class="d-flex align-items-center justify-content-end">
             <div class="form-check form-switch align-items-center d-flex">
-               <input class="form-check-input" type="radio" role="switch" id="difficultyradiochecked" name="difficulty"
-                  checked>
+               <input class="form-check-input  shadow-sm" type="radio" role="switch" id="difficultyradiochecked"
+                  name="difficulty" checked>
                <label class="form-check-label ms-2 text-white fs-5 fw-bold text-shadow"
                   for="difficultyradiochecked">Easy</label>
             </div>
             <span class="mx-4"></span>
             <div class="form-check form-switch align-items-center d-flex">
-               <input class="form-check-input" type="radio" role="switch" id="difficultyradiounchecked"
+               <input class="form-check-input shadow-sm" type="radio" role="switch" id="difficultyradiounchecked"
                   name="difficulty">
                <label class="form-check-label ms-2 text-white fs-5 fw-bold text-shadow"
                   for="difficultyradiounchecked">Hard</label>
@@ -41,7 +41,95 @@
 
    <!-- Main Section -->
    <main class="container py-5">
+      <div class="pb-5 text-white">
+         <div class="row row-cols-3">
+            <div class="col-2">
+               <div class="text-center">
+                  <p class="score-text">SCORE</p>
+                  <p class="score-no-text">0</p>
+               </div>
+               <div class="d-flex justify-content-center mt-2">
+                  <div class="outer-box outer-box-win">
+                     <div class="inner-box">
+                        <img src="assets/images/gamehandicons/hand-lizard.svg" alt="player choosed icon">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-8">
+               <div class="d-flex justify-content-center align-items-center">
+                  <div>
+                     <button class="btn game-big-button">
+                        <span class="gradient-text-design">
+                           ROUNDS : 0
+                        </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="text-center">
+                  <p class="score-text">SCORE</p>
+                  <p class="score-no-text">10</p>
+               </div>
+               <div class="d-flex justify-content-center mt-2">
+                  <div class="outer-box outer-box-lose">
+                     <div class="inner-box">
+                        <img src="assets/images/gamehandicons/hand-spock.svg" alt="player choosed icon">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
 
+         <div class="py-3"></div>
+         <div class="row row-cols-8">
+            <div class="col">
+               <div class="outer-box-small">
+                  <div class="inner-box-small">
+                     <img class="small-image" src="assets/images/gamehandicons/hand-lizard.svg"
+                        alt="player choosed icon">
+                  </div>
+               </div>
+               <!-- <p class="text-center mb-0 mt-2">Rock</p> -->
+            </div>
+            <div class="col">
+               <div class="outer-box-small">
+                  <div class="inner-box-small">
+                     <img class="small-image" src="assets/images/gamehandicons/hand-lizard.svg"
+                        alt="player choosed icon">
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="outer-box-small">
+                  <div class="inner-box-small">
+                     <img class="small-image" src="assets/images/gamehandicons/hand-lizard.svg"
+                        alt="player choosed icon">
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="outer-box-small">
+                  <div class="inner-box-small">
+                     <img class="small-image" src="assets/images/gamehandicons/hand-lizard.svg"
+                        alt="player choosed icon">
+                  </div>
+               </div>
+            </div>
+            <div class="col">
+               <div class="outer-box-small">
+                  <div class="inner-box-small">
+                     <img class="small-image" src="assets/images/gamehandicons/hand-lizard.svg"
+                        alt="player choosed icon">
+                  </div>
+               </div>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+         </div>
+      </div>
    </main>
 
    <!-- Including Popper JS CDN for some functionality of Bootstrap Like Modal and Popups -->
