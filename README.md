@@ -1,1 +1,1 @@
-# Rock-Paper-Scissors-Lizard-Spock-Game | Project-2
+# Rock Paper Scissors Lizard Spock Game
