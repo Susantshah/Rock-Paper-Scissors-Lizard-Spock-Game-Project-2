@@ -118,16 +118,15 @@ body {
   font-style: normal;
   font-weight: 800;
   font-size: 39px;
-  line-height: 48px;
   /* identical to box height */
   color: #ffffff;
+  margin-bottom: 0;
 }
 .score-no-text {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 800;
   font-size: 88px;
-  line-height: 107px;
   color: #ffb800;
 }
 
@@ -155,7 +154,7 @@ body {
   padding: 0.5rem;
 }
 .inner-box-small {
-  background-color: white;
+  background-color: #0f0f27;
   border-radius: 50%;
   padding: 2rem;
 }
