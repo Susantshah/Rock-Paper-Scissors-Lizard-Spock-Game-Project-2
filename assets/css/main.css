@@ -163,6 +163,11 @@ body {
   width: 50px;
 }
 
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* 
 Media Query For Responsive Design | min-width:700px will 
 apply the css inside the block
