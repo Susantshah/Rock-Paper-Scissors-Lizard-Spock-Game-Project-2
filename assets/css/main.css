@@ -167,6 +167,28 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.indicator-image {
+  position: absolute;
+  bottom: -1rem;
+  transform: scale(0.7);
+}
+.game-result-text {
+  font-size: 41px;
+  font-weight: bold;
+  color: white;
+}
+.lose-text {
+  font-weight: bold;
+  font-size: 53px;
+  color: #ff0000;
+  text-shadow: 2px 0px 0px #ffffff;
+}
+.win-text {
+  font-weight: bold;
+  font-size: 53px;
+  color: green;
+  text-shadow: 2px 0px 0px #ffffff;
+}
 
 /* 
 Media Query For Responsive Design | min-width:700px will 
