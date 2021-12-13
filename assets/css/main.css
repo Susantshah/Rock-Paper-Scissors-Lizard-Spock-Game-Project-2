@@ -117,7 +117,7 @@ body {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 800;
-  font-size: 39px;
+  font-size: 30px;
   /* identical to box height */
   color: #ffffff;
   margin-bottom: 0;
@@ -126,7 +126,7 @@ body {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 800;
-  font-size: 88px;
+  font-size: 60px;
   color: #ffb800;
 }
 
@@ -134,12 +134,15 @@ body {
   background: linear-gradient(90.87deg, #ffd8d8 0%, #ffdfbb 101.37%);
   padding: 0.7rem;
   border-radius: 50%;
+  filter: blur(3px);
 }
 .outer-box-win {
   background: linear-gradient(90.87deg, #1bb661 0%, #05ff76 101.37%);
+  filter: blur(0px);
 }
 .outer-box-lose {
   background: linear-gradient(90.87deg, #ff0000 0%, #ff5100 101.37%);
+  filter: blur(0px);
 }
 .inner-box {
   background-color: white;
@@ -152,6 +155,22 @@ body {
   background: linear-gradient(90.87deg, #ffd8d8 0%, #ffdfbb 101.37%);
   border-radius: 50%;
   padding: 0.5rem;
+}
+.outer-box-small:hover {
+  background: linear-gradient(90.87deg, #ff3c3c 0%, #ff8800 101.37%);
+  cursor: pointer;
+}
+.outer-box-small:hover .inner-box-small {
+  background: #ffffff;
+  cursor: pointer;
+}
+.outer-box-small-clicked {
+  background: linear-gradient(90.87deg, #ff3c3c 0%, #ff8800 101.37%);
+  cursor: pointer;
+}
+.inner-box-small-outer-clicked {
+  background: #ffffff;
+  cursor: pointer;
 }
 .inner-box-small {
   background-color: #0f0f27;
@@ -189,7 +208,18 @@ body {
   color: green;
   text-shadow: 2px 0px 0px #ffffff;
 }
-
+.absolute-text-design {
+  position: absolute;
+  right: 15rem;
+}
+.arrow-inside {
+  position: absolute;
+  right: 0;
+}
+.select-choice-text {
+  font-weight: bold;
+  font-size: 20px;
+}
 /* 
 Media Query For Responsive Design | min-width:700px will 
 apply the css inside the block
