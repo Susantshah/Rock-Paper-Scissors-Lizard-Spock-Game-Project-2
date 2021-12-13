@@ -264,13 +264,14 @@ especially for mobile
     width: 100%;
   }
   .game-result-text {
-    font-size: 21px;
+    font-size: 18px;
+    font-weight: 700;
   }
   .lose-text {
-    font-size: 33px;
+    font-size: 25px;
   }
   .win-text {
-    font-size: 33px;
+    font-size: 25px;
   }
   .absolute-text-design {
     display: none;
@@ -290,14 +291,12 @@ especially for mobile
   .indicator-image {
     transform: scale(0.6);
   }
-  .outer-box-small {
-    padding: 0.2rem;
-  }
-  .inner-box-small {
-    padding: 0.8rem;
-  }
   .small-image {
     height: 50px;
     width: 50px;
+  }
+  .rounds-button-mobile {
+    height: 50px;
+    border-width: 5px;
   }
 }
