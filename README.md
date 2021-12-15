@@ -4,6 +4,8 @@ Welcome to Rock - Paper - Scissors - Lizard - Spock game, the extended version o
 
 Link to live website : [Click here to visit live website](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/)
 
+![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/mobile-desktop-view-mockup.jpg)
+
 > The new version of the game provides more entertaintment to the game by having more oppoutunities to user to win or lose the game.
 
 ## Features
