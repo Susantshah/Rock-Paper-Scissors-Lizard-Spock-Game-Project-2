@@ -46,3 +46,17 @@ This section shows both user and computer choice and also shows winner of the ro
 In this section, user can select their choice and after that computer randomly made its choice. The winner is decided based on both users and computer choice.
 
 ![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/user-select-section.jpg)
+
+### Features which can be added later
+
+- Using websockets to make the game Realtime Multiplayer
+
+## Deployment
+
+The project is deployed to GitHub Pages by following below steps :
+
+1. Logging in to **GitHub** and navigate to the [Project Repository](https://github.com/Susantshah/rock-paper-scissors-lizard-spock-game-project2).
+2. From repository , click **Settings**.
+3. From the left sidebar in **Settings**, click **Pages** from the left-side menu.
+4. Winthin "Source", select the **Main Branch** and hit **Save**.
+5. To watch your published site live, under **GitHub Pages**, click the given site's url.
