@@ -13,3 +13,23 @@ Link to live website : [Click here to visit live website](https://susantshah.git
 This website is build for providing any online user to play the Rock Paper Scissors Lizard Spock game anytime with automated computer and get entertained. User can play game in both easy and hard mode, where hard mode makes more easy to win for computer by letting it choose twice if it's unable to win at first glance. This way computer has double probability of winning the game, user's probability to win is halfed in hard mode.
 
 ### Major Features
+
+#### Home Page
+
+![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/homepage.jpg)
+
+#### Rules Section
+
+![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/rules-modal-design.jpg)
+
+#### Difficulty Choose Section
+
+![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/difficulty-design.jpg)
+
+#### Main Game User VS Computer View Section
+
+![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/game-view-user-computer.jpg)
+
+#### User Select Section
+
+![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/user-select-section.jpg)
