@@ -26,14 +26,14 @@
          <div class="d-flex align-items-center justify-content-end">
             <div class="form-check form-switch align-items-center d-flex">
                <input class="form-check-input  shadow-sm" type="radio" role="switch" id="difficultyradiochecked"
-                  name="difficulty" checked>
+                  name="difficulty" value="easy" checked>
                <label class="form-check-label ms-2 text-white fs-5 fw-bold text-shadow"
                   for="difficultyradiochecked">Easy</label>
             </div>
             <span class="mx-2 mx-md-4"></span>
             <div class="form-check form-switch align-items-center d-flex">
                <input class="form-check-input shadow-sm" type="radio" role="switch" id="difficultyradiounchecked"
-                  name="difficulty">
+                  name="difficulty" value="hard">
                <label class="form-check-label ms-2 text-white fs-5 fw-bold text-shadow"
                   for="difficultyradiounchecked">Hard</label>
             </div>
@@ -51,10 +51,11 @@
                   <p class="score-no-text">0</p>
                </div>
                <div class="d-flex justify-content-center mt-2 position-relative">
-                  <div class="outer-box">
+                  <div class="outer-box" id="choice-outer-box-user">
                      <!-- outer-box-win -->
                      <div class="inner-box">
-                        <img src="assets/images/gamehandicons/hand-lizard.svg" alt="player choosed icon">
+                        <img src="assets/images/gamehandicons/hand-lizard.svg" alt="player choosed icon"
+                           id="player-choice">
                      </div>
                   </div>
                   <img src="assets/images/you-text-design.png" alt="user design for ux" class="indicator-image">
@@ -83,10 +84,11 @@
                   <p class="score-no-text">10</p>
                </div>
                <div class="d-flex justify-content-center mt-2 position-relative">
-                  <div class="outer-box">
+                  <div class="outer-box" id="choice-outer-box-computer">
                      <!-- outer-box-lose -->
                      <div class="inner-box">
-                        <img src="assets/images/gamehandicons/hand-spock.svg" alt="player choosed icon">
+                        <img src="assets/images/gamehandicons/hand-spock.svg" alt="computer choosed icon"
+                           id="computer-choice">
                      </div>
                   </div>
                   <img src="assets/images/computer-text-design.png" alt="computer design for ux"
