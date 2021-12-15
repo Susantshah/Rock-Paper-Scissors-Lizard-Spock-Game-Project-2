@@ -16,20 +16,28 @@ This website is build for providing any online user to play the Rock Paper Sciss
 
 #### Home Page
 
-![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/homepage.jpg)
+This is the entry page of the website where there are two buttons
+
+- Play game button takes user to gamepage where user can play the game with computer by selecting difficulty levels.
+- View rules button opens up a moal popup which shows the game rules and winning possibilities.
+  ![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/homepage.jpg)
 
 #### Rules Section
 
+Rules sections contains all the winning and losing combination when user plays and it also shows the first one to score 10 will win the game.
 ![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/rules-modal-design.jpg)
 
 #### Difficulty Choose Section
 
+This section consists of two radio buttons where user can select the difficulty level to be easy or hard.
 ![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/difficulty-design.jpg)
 
 #### Main Game User VS Computer View Section
 
+This section shows both user and computer choice and also shows winner of the round. This section gives user information about how many rounds have been played already
 ![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/game-view-user-computer.jpg)
 
 #### User Select Section
 
+In this section, user can select their choice and after that computer randomly made its choice. The winner is decided based on both users and computer choice.
 ![Responsice Mockup](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/user-select-section.jpg)
