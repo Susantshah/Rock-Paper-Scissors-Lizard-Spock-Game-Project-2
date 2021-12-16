@@ -93,7 +93,7 @@ Another error I came across validator testing was on role="switch" on radiobutto
 
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Fassets%2Fcss%2Fmain.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-  ![Main CSS Test](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/main-css.jpg)
+  ![Main CSS Test](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/main-css-check.jpg)
 
 - Lighthouse Test
   ![Google Lighthouse Test Result](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/lighthouse.jpg)
