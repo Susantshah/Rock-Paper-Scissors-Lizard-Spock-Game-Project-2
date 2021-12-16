@@ -4,36 +4,36 @@
 difficult is selected then difficulty.checked would be false 
 else true. */
 
-const difficulty = document.querySelector('input[name="difficulty"]');
+var difficulty = document.querySelector('input[name="difficulty"]');
 
 //Scores and Rounds Div
-const computerScoreDiv = document.getElementById("computer-score");
-const userScoreDiv = document.getElementById("user-score");
-const roundsDiv = document.getElementById("game-rounds");
+var computerScoreDiv = document.getElementById("computer-score");
+var userScoreDiv = document.getElementById("user-score");
+var roundsDiv = document.getElementById("game-rounds");
 
 //Buttons Selection
-const playerChoiceRockButton = document.querySelector(".rockbtn");
-const playerChoicePaperButton = document.querySelector(".paperbtn");
-const playerChoiceScissorButton = document.querySelector(".scissorbtn");
-const playerChoiceLizardButton = document.querySelector(".lizardbtn");
-const playerChoiceSpockButton = document.querySelector(".spockbtn");
+var playerChoiceRockButton = document.querySelector(".rockbtn");
+var playerChoicePaperButton = document.querySelector(".paperbtn");
+var playerChoiceScissorButton = document.querySelector(".scissorbtn");
+var playerChoiceLizardButton = document.querySelector(".lizardbtn");
+var playerChoiceSpockButton = document.querySelector(".spockbtn");
 
-const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-const playerSelectedItem = document.getElementById("player-choice");
-const computerSelectedItem = document.getElementById("computer-choice");
-const playerOuterBox = document.getElementById("choice-outer-box-user");
-const computerOuterBox = document.getElementById("choice-outer-box-computer");
+var choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+var playerSelectedItem = document.getElementById("player-choice");
+var computerSelectedItem = document.getElementById("computer-choice");
+var playerOuterBox = document.getElementById("choice-outer-box-user");
+var computerOuterBox = document.getElementById("choice-outer-box-computer");
 
 //Image urls
-const rockImage = "assets/images/gamehandicons/hand-rock.svg";
-const paperImage = "assets/images/gamehandicons/hand-paper.svg";
-const scissorImage = "assets/images/gamehandicons/hand-scissors.svg";
-const lizardImage = "assets/images/gamehandicons/hand-lizard.svg";
-const spockImage = "assets/images/gamehandicons/hand-spock.svg";
+var rockImage = "assets/images/gamehandicons/hand-rock.svg";
+var paperImage = "assets/images/gamehandicons/hand-paper.svg";
+var scissorImage = "assets/images/gamehandicons/hand-scissors.svg";
+var lizardImage = "assets/images/gamehandicons/hand-lizard.svg";
+var spockImage = "assets/images/gamehandicons/hand-spock.svg";
 
 //Text select
-const gameResutltText = document.getElementById("game-result");
-const winLoseText = document.getElementById("win-or-lose");
+var gameResutltText = document.getElementById("game-result");
+var winLoseText = document.getElementById("win-or-lose");
 
 // Global Variable
 let roundsCount = 0;
@@ -102,7 +102,7 @@ function computerRandomChoice() {
 
     console.log(getRandomNumber, getRandomNumber2, finalRandomNumber);
   }
-  const computerSelectedOption = choices[finalRandomNumber];
+  var computerSelectedOption = choices[finalRandomNumber];
   return computerSelectedOption;
 }
 
@@ -147,9 +147,9 @@ playerChoiceSpockButton.addEventListener("click", (e) => {
 });
 
 //function to handle main logic of game after user selected its choice
-const playLogic = (userChoice) => {
+var playLogic = (userChoice) => {
   // Get computer random choice from computerRandomChoice function
-  const computerChoice = computerRandomChoice();
+  var computerChoice = computerRandomChoice();
   computerOuterBox.classList.add("outer-box-no-blur"); // remove blur from computer choice box
 
   //Selct computer selected image according to computerChoice using switch case
