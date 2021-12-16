@@ -81,21 +81,22 @@ Another error I came across validator testing was on role="switch" on radiobutto
 
 - HTML
 
-  - No errors were returned on index page when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Findex.html)
+  - No errors were returned on index page when passing through the official [W3 validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Findex.html)
 
   ![Index Page HTML Test](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/index-html-check.jpg)
 
-  - No errors were returned on game page when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Fgamepage.html)
+  - No errors were returned on game page when passing through the official [W3 validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Fgamepage.html)
 
   ![Game Page HTML Test](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/gamepage-html-check.jpg)
 
 - CSS
 
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Fassets%2Fcss%2Fmain.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - No errors were found when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsusantshah.github.io%2Frock-paper-scissors-lizard-spock-game-project2%2Fassets%2Fcss%2Fmain.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
   ![Main CSS Test](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/main-css-check.jpg)
 
 - Lighthouse Test
+
   ![Google Lighthouse Test Result](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/lighthouse.jpg)
 
 ## Deployment
@@ -107,3 +108,21 @@ The project is deployed to GitHub Pages by following below steps :
 3. From the left sidebar in **Settings**, click **Pages** from the left-side menu.
 4. Winthin "Source", select the **Main Branch** and hit **Save**.
 5. To watch your published site live, under **GitHub Pages**, click the given site's url.
+
+## Technologies Used
+
+For UI / UX Design - [Figma](https://figma.com/)
+
+For providing structure to the game - [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+For all styling and designs - [CSS3](https://en.wikipedia.org/wiki/CSS3)
+
+For Interacting with DOM and Functionalities - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+For Responsive Design and grid System - [Bootstrap](https://getbootstrap.com/)
+
+As a dependency for Bootstrap - [Popper](https://popper.js.org/)
+
+## Credits
+
+Media / Icons : [Icons8](https://icons8.com/)
