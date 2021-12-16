@@ -108,6 +108,16 @@ function setLoseText(userChoice, computerChoice) {
     winLoseText.classList.remove("win-text");
   }
   winLoseText.classList.add("lose-text");
+
+  if (playerOuterBox.classList.contains("outer-box-win")) {
+    playerOuterBox.classList.remove("outer-box-win");
+  }
+  playerOuterBox.classList.add("outer-box-lose");
+
+  if (computerOuterBox.classList.contains("outer-box-lose")) {
+    computerOuterBox.classList.remove("outer-box-lose");
+  }
+  computerOuterBox.classList.add("outer-box-win");
 }
 
 function setWinText(userChoice, computerChoice) {
@@ -117,6 +127,15 @@ function setWinText(userChoice, computerChoice) {
     winLoseText.classList.remove("lose-text");
   }
   winLoseText.classList.add("win-text");
+  if (playerOuterBox.classList.contains("outer-box-lose")) {
+    playerOuterBox.classList.remove("outer-box-lose");
+  }
+  playerOuterBox.classList.add("outer-box-win");
+
+  if (computerOuterBox.classList.contains("outer-box-win")) {
+    computerOuterBox.classList.remove("outer-box-win");
+  }
+  computerOuterBox.classList.add("outer-box-lose");
 }
 
 function checkGameWinner(userChoice, computerChoice) {
@@ -124,6 +143,18 @@ function checkGameWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
     gameResutltText.innerHTML = `${userChoice} Draws ${computerChoice}`;
     winLoseText.innerHTML = ``;
+    if (computerOuterBox.classList.contains("outer-box-win")) {
+      computerOuterBox.classList.remove("outer-box-win");
+    }
+    if (playerOuterBox.classList.contains("outer-box-win")) {
+      playerOuterBox.classList.remove("outer-box-win");
+    }
+    if (playerOuterBox.classList.contains("outer-box-lose")) {
+      playerOuterBox.classList.remove("outer-box-lose");
+    }
+    if (computerOuterBox.classList.contains("outer-box-lose")) {
+      computerOuterBox.classList.remove("outer-box-lose");
+    }
   } else if (userChoice === "Rock" && computerChoice === "Scissor") {
     setWinText(userChoice, computerChoice);
   } else if (userChoice === "Rock" && computerChoice === "Lizard") {
@@ -147,4 +178,5 @@ function checkGameWinner(userChoice, computerChoice) {
   } else {
     setLoseText(userChoice, computerChoice);
   }
+  /* Else condtion handle all cases when user will lose the game */
 }
