@@ -19,29 +19,46 @@ const computerSelectedItem = document.getElementById("computer-choice");
 const playerOuterBox = document.getElementById("choice-outer-box-user");
 const computerOuterBox = document.getElementById("choice-outer-box-computer");
 
+//Image urls
+const rockImage = "assets/images/gamehandicons/hand-rock.svg";
+const paperImage = "assets/images/gamehandicons/hand-paper.svg";
+const scissorImage = "assets/images/gamehandicons/hand-scissors.svg";
+const lizardImage = "assets/images/gamehandicons/hand-lizard.svg";
+const spockImage = "assets/images/gamehandicons/hand-spock.svg";
+
 // Global Variable
 let roundsCount = 0;
 let resultArray = [];
 
 playerChoiceRockButton.addEventListener("click", (e) => {
   e.preventDefault();
-  gamesLogic("Rock");
+  playerSelectedItem.src = rockImage;
+  playerOuterBox.classList.add("outer-box-no-blur");
+  playLogic("Rock");
 });
 playerChoicePaperButton.addEventListener("click", (e) => {
   e.preventDefault();
-  gamesLogic("Paper");
+  playerSelectedItem.src = paperImage;
+  playerOuterBox.classList.add("outer-box-no-blur");
+  playLogic("Paper");
 });
 playerChoiceScissorButton.addEventListener("click", (e) => {
   e.preventDefault();
-  gamesLogic("Scissor");
+  playerSelectedItem.src = scissorImage;
+  playerOuterBox.classList.add("outer-box-no-blur");
+  playLogic("Scissor");
 });
 playerChoiceLizardButton.addEventListener("click", (e) => {
   e.preventDefault();
-  gamesLogic("Lizard");
+  playerSelectedItem.src = lizardImage;
+  playerOuterBox.classList.add("outer-box-no-blur");
+  playLogic("Lizard");
 });
 playerChoiceSpockButton.addEventListener("click", (e) => {
   e.preventDefault();
-  gamesLogic("Spock");
+  playerSelectedItem.src = spockImage;
+  playerOuterBox.classList.add("outer-box-no-blur");
+  playLogic("Spock");
 });
 
 function computerRandomChoice() {
@@ -50,7 +67,32 @@ function computerRandomChoice() {
   return computerSelectedOption;
 }
 
-const gamesLogic = (userChoice) => {
+const playLogic = (userChoice) => {
   const computerChoice = computerRandomChoice();
+  computerOuterBox.classList.add("outer-box-no-blur");
+  switch (computerChoice) {
+    case "Rock":
+      computerSelectedItem.src = rockImage;
+      break;
+
+    case "Paper":
+      computerSelectedItem.src = paperImage;
+      break;
+
+    case "Scissor":
+      computerSelectedItem.src = scissorImage;
+      break;
+
+    case "Lizard":
+      computerSelectedItem.src = lizardImage;
+      break;
+
+    case "Spock":
+      computerSelectedItem.src = spockImage;
+      break;
+
+    default:
+      break;
+  }
   console.log(userChoice, computerChoice);
 };

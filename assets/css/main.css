@@ -136,6 +136,9 @@ body {
   border-radius: 50%;
   filter: blur(3px);
 }
+.outer-box-no-blur {
+  filter: blur(0px) !important;
+}
 .outer-box-win {
   background: linear-gradient(90.87deg, #1bb661 0%, #05ff76 101.37%);
   filter: blur(0px);
