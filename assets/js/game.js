@@ -98,104 +98,53 @@ const playLogic = (userChoice) => {
     default:
       break;
   }
-  checkWinner(userChoice, computerChoice);
+  checkGameWinner(userChoice, computerChoice);
 };
 
-function checkWinner(playerChoice, computerChoice) {
-  /* If player chooses rock */
-  if (playerChoice === "rock" && computerChoice === "rock") {
-    document.getElementById("messages").innerHTML = "Draw!";
-  } else if (playerChoice === "rock" && computerChoice === "paper") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Paper Covers Rock";
-    addComputerScore();
-  } else if (playerChoice === "rock" && computerChoice === "scissors") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Rock Crushes Scissors";
-    addUserScore();
-  } else if (playerChoice === "rock" && computerChoice === "lizard") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Rock Crushes Lizard";
-    addUserScore();
-  } else if (playerChoice === "rock" && computerChoice === "spock") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Spock Vaporizes Rock";
-    addComputerScore();
-  } else if (playerChoice === "paper" && computerChoice === "paper") {
-  /* If chooses paper */
-    document.getElementById("messages").innerHTML = "Draw!";
-  } else if (playerChoice === "paper" && computerChoice === "rock") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Paper Covers Rock";
-    addUserScore();
-  } else if (playerChoice === "paper" && computerChoice === "scissors") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Scissors Cuts Paper";
-    addComputerScore();
-  } else if (playerChoice === "paper" && computerChoice === "lizard") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Lizard Eats Paper";
-    addComputerScore();
-  } else if (playerChoice === "paper" && computerChoice === "spock") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Paper Disproves Spock";
-    addUserScore();
-  } else if (playerChoice === "scissors" && computerChoice === "scissors") {
-  /* If player chooses scissors */
-    document.getElementById("messages").innerHTML = "Draw!";
-  } else if (playerChoice === "scissors" && computerChoice === "rock") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Rock Crushes Scissors";
-    addComputerScore();
-  } else if (playerChoice === "scissors" && computerChoice === "paper") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Scissors Cuts Paper";
-    addUserScore();
-  } else if (playerChoice === "scissors" && computerChoice === "lizard") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Scissors Decapitates Lizard";
-    addUserScore();
-  } else if (playerChoice === "scissors" && computerChoice === "spock") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Spock Smashes Scissors";
-    addComputerScore();
-  } else if (playerChoice === "lizard" && computerChoice === "lizard") {
-  /* If player chooses lizard */
-    document.getElementById("messages").innerHTML = "Draw!";
-  } else if (playerChoice === "lizard" && computerChoice === "rock") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Rock Crushes Lizard";
-    addComputerScore();
-  } else if (playerChoice === "lizard" && computerChoice === "paper") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Lizard Eats Paper";
-    addUserScore();
-  } else if (playerChoice === "lizard" && computerChoice === "scissors") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Scissors Decapitates Lizard";
-    addComputerScore();
-  } else if (playerChoice === "lizard" && computerChoice === "spock") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Lizard Poisons Spock";
-    addUserScore();
-  } else if (playerChoice === "spock" && computerChoice === "spock") {
-  /* If player chooses spock */
-    document.getElementById("messages").innerHTML = "Draw!";
-  } else if (playerChoice === "spock" && computerChoice === "rock") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Spock Vaporizes Rock ";
-    addUserScore();
-  } else if (playerChoice === "spock" && computerChoice === "paper") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Paper Disproves Spock";
-    addComputerScore();
-  } else if (playerChoice === "spock" && computerChoice === "scissors") {
-    document.getElementById("messages").innerHTML =
-      "You Win! Spock Smashes Scissors";
-    addUserScore();
-  } else if (playerChoice === "spock" && computerChoice === "lizard") {
-    document.getElementById("messages").innerHTML =
-      "You Lose! Lizard Poisons Spock";
-    addUserScore();
+function setLoseText(userChoice, computerChoice) {
+  gameResutltText.innerHTML = `${computerChoice} Beats ${userChoice}`;
+  winLoseText.innerHTML = `YOU LOSE!`;
+  if (winLoseText.classList.contains("win-text")) {
+    winLoseText.classList.remove("win-text");
+  }
+  winLoseText.classList.add("lose-text");
+}
+
+function setWinText(userChoice, computerChoice) {
+  gameResutltText.innerHTML = `${userChoice} Beats ${computerChoice}`;
+  winLoseText.innerHTML = `YOU WIN!`;
+  if (winLoseText.classList.contains("lose-text")) {
+    winLoseText.classList.remove("lose-text");
+  }
+  winLoseText.classList.add("win-text");
+}
+
+function checkGameWinner(userChoice, computerChoice) {
+  /* If game draws */
+  if (userChoice === computerChoice) {
+    gameResutltText.innerHTML = `${userChoice} Draws ${computerChoice}`;
+    winLoseText.innerHTML = ``;
+  } else if (userChoice === "Rock" && computerChoice === "Scissor") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Rock" && computerChoice === "Lizard") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Lizard" && computerChoice === "Spock") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Lizard" && computerChoice === "Paper") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Paper" && computerChoice === "Rock") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Paper" && computerChoice === "Spock") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Scissor" && computerChoice === "Rock") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Scissor" && computerChoice === "Spock") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Spock" && computerChoice === "Rock") {
+    setWinText(userChoice, computerChoice);
+  } else if (userChoice === "Spock" && computerChoice === "Scissor") {
+    setWinText(userChoice, computerChoice);
+  } else {
+    setLoseText(userChoice, computerChoice);
   }
 }
