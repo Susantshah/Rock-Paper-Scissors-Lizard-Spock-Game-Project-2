@@ -36,9 +36,9 @@ var gameResutltText = document.getElementById("game-result");
 var winLoseText = document.getElementById("win-or-lose");
 
 // Global Variable
-let roundsCount = 0;
-let userScore = 0;
-let computerScore = 0;
+var roundsCount = 0;
+var userScore = 0;
+var computerScore = 0;
 
 // Function to increment computer score when computer wins
 function incrementComputerScore() {
@@ -91,13 +91,13 @@ function computerRandomChoice() {
   are treated array index of choices array
   and selected one item randomly and returened 
   it to calling function playLogic */
-  let getRandomNumber = Math.floor(Math.random() * 5);
-  let finalRandomNumber = getRandomNumber;
+  var getRandomNumber = Math.floor(Math.random() * 5);
+  var finalRandomNumber = getRandomNumber;
   /* Hard Mode is handled by giving computer 
     two chance to select randomly and averaging the result */
   if (!difficulty.checked) {
     //Handle Hard Mode when difficulty i.e Easy is not checked
-    let getRandomNumber2 = Math.floor(Math.random() * 5);
+    var getRandomNumber2 = Math.floor(Math.random() * 5);
     finalRandomNumber = Math.floor((getRandomNumber + getRandomNumber2) / 2);
 
     console.log(getRandomNumber, getRandomNumber2, finalRandomNumber);
