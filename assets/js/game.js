@@ -1,4 +1,4 @@
-/* Take DOM elements */
+// Take DOM elements
 
 /* Select First Radio Button i.e Easy one input, so if
 difficult is selected then difficulty.checked would be false 
@@ -44,12 +44,24 @@ let computerScore = 0;
 function incrementComputerScore() {
   computerScore += 1;
   computerScoreDiv.innerHTML = computerScore;
+
+  // Computer Won by scoring 10 first
+  if (computerScore == 10) {
+    alert("Computer Has Won the Game by reaching to Score : 10 First .");
+    resetGame(); // reset game
+  }
 }
 
 // Function to increment user score when user wins
 function incrementUserScore() {
   userScore += 1;
   userScoreDiv.innerHTML = userScore;
+
+  // User Win by scoring 10 first
+  if (computerScore == 10) {
+    alert("Congrats! You Have Won the Game by reaching to Score : 10 First .");
+    resetGame(); // reset game
+  }
 }
 
 // Function to increment no of rounds player after each round
@@ -75,8 +87,18 @@ function computerRandomChoice() {
   are treated array index of choices array
   and selected one item randomly and returened 
   it to calling function playLogic */
-  const getRandomNumber = Math.floor(Math.random() * 5);
-  const computerSelectedOption = choices[getRandomNumber];
+  let getRandomNumber = Math.floor(Math.random() * 5);
+  let finalRandomNumber = getRandomNumber;
+  /* Hard Mode is handled by giving computer 
+    two chance to select randomly and averaging the result */
+  if (!difficulty.checked) {
+    //Handle Hard Mode when difficulty i.e Easy is not checked
+    let getRandomNumber2 = Math.floor(Math.random() * 5);
+    finalRandomNumber = Math.floor((getRandomNumber + getRandomNumber2) / 2);
+
+    console.log(getRandomNumber, getRandomNumber2, finalRandomNumber);
+  }
+  const computerSelectedOption = choices[finalRandomNumber];
   return computerSelectedOption;
 }
 
