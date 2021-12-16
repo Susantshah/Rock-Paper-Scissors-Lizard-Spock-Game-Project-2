@@ -174,12 +174,12 @@ const playLogic = (userChoice) => {
       break;
   }
 
+  //Increase no of rounds on every playLogic call
+  incrementRounds();
+
   /* Calling checkGameWinner function with 
   userchoice and computerchoice as argument for game result */
   checkGameWinner(userChoice, computerChoice);
-
-  //Increase no of rounds on every playLogic call
-  incrementRounds();
 };
 
 //Function to show text in gamescreen when user loses the game
