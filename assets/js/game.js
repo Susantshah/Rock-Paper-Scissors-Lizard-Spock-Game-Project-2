@@ -79,6 +79,10 @@ function resetGame() {
   computerScoreDiv.innerHTML = computerScore;
   userScoreDiv.innerHTML = userScore;
   roundsDiv.innerHTML = roundsCount;
+
+  //Clearing game result info text
+  gameResutltText.innerHTML = ``;
+  winLoseText.innerHTML = ``;
 }
 
 //Function to generate random choice for computer
