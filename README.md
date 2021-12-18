@@ -10,7 +10,7 @@ Link to live website : [Click here to visit live website](https://susantshah.git
 
 ## Features
 
-This website is build for providing any online user to play the Rock Paper Scissors Lizard Spock game anytime with automated computer and get entertained. User can play game in both easy and hard mode, where hard mode makes more easy to win for computer by letting it choose twice if it's unable to win at first glance. This way computer has double probability of winning the game, user's probability to win is halfed in hard mode.
+This website is build for providing any online user to play the Rock Paper Scissors Lizard Spock game anytime with automated computer and get entertained. User can play game in both easy and hard mode, where hard mode makes more easy to win for computer by letting it choose twice and average its result . This way computer has increased probability of winning the game, user's probability to win is decreased in hard mode.
 
 ### Major Features
 
