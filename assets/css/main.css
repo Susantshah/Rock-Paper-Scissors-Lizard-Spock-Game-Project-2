@@ -16,16 +16,116 @@
 body {
   background: #141539;
 }
-
 /* Class to make background dark blue */
 .bg-blue {
   background: #141539;
 }
 
+.container {
+  padding: 1rem;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.row-gamepage-only {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.user-score-col {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+.rounds-col {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+.computer-score-col {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+.row-select-choice {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  color: white;
+  margin-top: 3rem;
+}
+.column-1 {
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: rgb(255, 0, 0);
+  border-radius: 20px;
+  border: 1px solid red;
+}
+.btn-white {
+  box-sizing: content-box;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  background: white;
+  border-radius: 5px;
+  border: none;
+}
+.play-game-btn {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
 /* Top navbar */
 .header-background {
   background: linear-gradient(90.87deg, #ff4848 0%, #ff8a00 101.37%);
   height: 130px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1998;
+}
+.header-inside {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.difficulty-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main-section {
+  padding: 5rem 0;
 }
 
 /* Main Title */
@@ -55,6 +155,8 @@ body {
   line-height: 63px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.5rem !important;
+  text-decoration: none;
 }
 /* All buttons hovers and focus states outline and box shadow removing */
 .btn:hover,
@@ -72,6 +174,8 @@ body {
   width: 506px;
   height: 174px;
   transition: border 0.3s ease-in-out;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Big game button hover states */
@@ -79,7 +183,9 @@ body {
 .game-big-button:focus {
   border: 11px solid #ff0202cc;
 }
-
+.text-red {
+  color: red;
+}
 /* Gradient text design */
 .gradient-text-design {
   font-size: 48px;
@@ -90,42 +196,66 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Rules modal top part */
-.modal-top-header {
-  background: #eff8ff;
-  border-radius: 0px 0px 40px 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 0;
-}
-
-/* Rules Modal Box */
-.modal-dialog {
-  max-width: 100%;
-}
-
 /* Radiobutton input for difficulty easy and hard */
-.form-check-input {
+.radio-check-input {
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   padding: 1rem 2rem !important;
   border-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  float: left;
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position 0.15s ease-in-out;
 }
 
 /* Radiobutton input for difficulty easy and hard checked state */
-.form-check-input:checked {
+.radio-check-input:checked {
   background-color: green !important;
   border-color: green;
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
   box-shadow: none;
 }
 
 /* Focus state of radiobutton input */
-.form-check-input:focus {
+.radio-check-input:focus {
   box-shadow: none;
   border-color: green;
 }
+.display-large-block {
+  display: block;
+}
+.display-large-none {
+  display: none;
+}
+.radio-check {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-left: 2.5em;
+  margin-left: 0.4rem;
+}
 
 /* Label for easy and hard mode checkbox */
-.form-check-label {
+.radio-label {
   margin-top: 2px;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  margin-left: 0.5rem !important;
+  text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  color: white;
 }
 
 /* Score text */
@@ -138,6 +268,15 @@ body {
   color: #ffffff;
   margin-bottom: 0;
 }
+.bg-green {
+  background-color: #198754;
+}
+.bg-red {
+  background-color: #dc3545;
+}
+.circle-round {
+  border-radius: 50%;
+}
 
 /* Score no text design */
 .score-no-text {
@@ -146,8 +285,15 @@ body {
   font-weight: 800;
   font-size: 60px;
   color: #ffb800;
+  margin-bottom: 1rem;
 }
 
+.outer-box-cover {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+  position: relative;
+}
 /* Selected item box */
 .outer-box {
   background: linear-gradient(90.87deg, #ffd8d8 0%, #ffdfbb 101.37%);
@@ -261,6 +407,7 @@ body {
 .arrow-inside {
   position: absolute;
   right: 0;
+  top: -4rem;
 }
 /* Select choice text design */
 .select-choice-text {
@@ -268,22 +415,30 @@ body {
   font-size: 15px;
   position: absolute;
   right: -3rem;
-  top: -3rem;
+  top: -2rem;
 }
-/* 
-Media Query For Responsive Design | min-width:700px will 
-apply the css inside the block
-whenever the screen size is greater than 700px 
-*/
-
-@media only screen and (min-width: 700px) {
-  /* 
-  Rules Modal Dialog to maximum 80% screen size when website is viewed
-  on screen greater than 700px
-  */
-  .modal-dialog {
-    max-width: 80%;
-  }
+.text-white {
+  color: white;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.rounds-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+.order-large-second {
+  order: 2;
+}
+.order-large-third {
+  order: 3;
 }
 
 /* 
@@ -292,8 +447,69 @@ apply the css inside the block
 whenever the screen size is less than 700px 
 especially for mobile
 */
-
+.choice-column-smalls {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+.choice-column-larger {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
 @media only screen and (max-width: 700px) {
+  .choice-column {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+  .choice-column-larger {
+    justify-content: center;
+  }
+  .user-score-col {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .rounds-col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .computer-score-col {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .order-first {
+    order: 1 !important;
+  }
+  .order-second {
+    order: 2 !important;
+  }
+  .order-third {
+    order: 3 !important;
+  }
+  .display-block {
+    display: block;
+  }
+  .display-none {
+    display: none;
+  }
+  .row-gamepage-only {
+    padding: 0.7rem;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 0.7rem;
+  }
+  .main-section {
+    padding: 0.5rem;
+  }
   .game-big-button {
     width: 100%;
     height: 100px;
@@ -345,5 +561,14 @@ especially for mobile
   .rounds-button-mobile {
     height: 50px;
     border-width: 5px;
+  }
+  .play-game-btn {
+    padding-top: 2rem !important;
+  }
+  .row-select-choice {
+    margin-top: 0;
+  }
+  .width-full {
+    width: 100%;
   }
 }

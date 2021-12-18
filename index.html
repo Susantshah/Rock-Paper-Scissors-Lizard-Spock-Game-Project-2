@@ -8,131 +8,134 @@
    <title>Rock Paper Scissors Lizard Spock Game</title>
 
    <!-- Bootstrap UI Library Minified CSS Inclusion -->
-   <link rel="stylesheet" href="libraries/bootstrap5/css/bootstrap.min.css">
+   <!--    <link rel="stylesheet" href="libraries/bootstrap5/css/bootstrap.min.css"> -->
 
    <!-- Custom External CSS Linking -->
+   <link rel="stylesheet" href="assets/css/modal.css">
    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
    <!-- Header Section -->
-   <header
-      class="header-background header-background-mobile d-flex justify-content-start align-items-center sticky-top">
-      <h1 class="fw-bold title-text fs-5 container">
+   <header class="header-background header-background-mobile">
+      <h1 class="title-text container">
          ROCK - PAPER - SCISSORS - LIZARD - SPOCK
       </h1>
    </header>
 
    <!-- Main Section -->
-   <main class="container py-3 py-md-5">
-      <div class="row row-cols-1 row-cols-lg-2">
-         <div class="col">
-            <div class="py-3"></div>
+   <main class="container main-section">
+      <div class="row">
+         <div class="column1">
             <a href="gamepage.html" class="btn game-big-button">
-               <p class="gradient-text-design mb-0 d-flex align-items-center justify-content-center pt-4 mt-2">
+               <p class="gradient-text-design play-game-btn">
                   PLAY GAME
                </p>
             </a>
-            <div class="py-2 py-md-5"></div>
 
             <!-- Button trigger modal -->
-            <button class="btn game-big-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="btn game-big-button" id="modal-btn">
                <span class="gradient-text-design">
                   VIEW RULES
                </span>
             </button>
 
             <!-- Modal For Rules -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
+            <div class="modal hide" id="modal-box">
                <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                      <div class="modal-header">
-                        <h5 class="modal-title text-dark" id="exampleModalLabel">Game Rules <span
-                              class="text-danger">*</span> [ First to Score 10 Will
+                        <h5 class="modal-title">Game Rules <span class="text-red">*</span> [ First to Score 10 Will
                            Win ] </h5>
-                        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn btn-close" id="modal-close-btn"><svg
+                              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-x-lg" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd"
+                                 d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                              <path fill-rule="evenodd"
+                                 d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                           </svg></button>
                      </div>
                      <div class="modal-body p-0">
                         <div class="py-5 px-3 bg-blue">
-                           <div class="row row-cols-1 row-cols-md-2">
-                              <div class="col">
-                                 <div class="d-flex justify-content-center align-items-center">
-                                    <img src="assets/images/heroimage.png" alt="rules image" class="img-fluid">
+                           <div class="row">
+                              <div class="column">
+                                 <div>
+                                    <img src="assets/images/heroimage.png" alt="rules image" class="img-responsive">
                                  </div>
                               </div>
-                              <div class="col">
-                                 <div class="pt-3 px-md-5 fs-5">
-                                    <ul class="list-group">
-                                       <li class="list-group-item">
+                              <div class="column1">
+                                 <div>
+                                    <ul class="group-of-list">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Rock Beats Scissors
                                           <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand scissors"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Rock Beats Lizard
                                           <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand lizard"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Lizard Beats Spock
                                           <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Lizard Beats Paper
                                           <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Paper Beats Rock
                                           <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand paper"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Paper Beats Spock
                                           <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand spock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Spock Beats Scissors
                                           <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Spock Beats Rock
                                           <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Scissors Beats Paper
                                           <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
-                                       <li class="list-group-item">
+                                       <li class="list-item">
                                           <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-success rounded-circle p-1">
+                                             width="30" height="30" class="bg-green circle-round rule-img">
                                           Scissors Beats Lizard
                                           <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand rock"
-                                             width="30" height="30" class="bg-danger rounded-circle p-1">
+                                             width="30" height="30" class="bg-red circle-round rule-img">
                                        </li>
                                     </ul>
                                  </div>
@@ -144,20 +147,14 @@
                </div>
             </div>
          </div>
-         <div class="col mt-4 mt-md-0">
-            <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-               <img src="assets/images/heroimage.png" alt="Rock Paper Siscssor Lizard Spock Game Round Image"
-                  class="img-fluid">
-            </div>
+         <div class="column">
+            <img src="assets/images/heroimage.png" alt="Rock Paper Siscssor Lizard Spock Game Round Image"
+               class="img-responsive">
          </div>
       </div>
    </main>
 
-   <!-- Including Popper JS CDN for some functionality of Bootstrap Like Modal and Popups -->
-   <script src="https://unpkg.com/@popperjs/core@2"></script>
-
-   <!-- Including Minified Javascript of Bootstrap -->
-   <script src="libraries/bootstrap5/js/bootstrap.min.js"></script>
+   <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

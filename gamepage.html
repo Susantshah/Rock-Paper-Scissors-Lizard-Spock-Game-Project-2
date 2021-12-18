@@ -7,54 +7,49 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Rock Paper Scissors Lizard Spock Game</title>
 
-   <!-- Bootstrap UI Library Minified CSS Inclusion -->
-   <link rel="stylesheet" href="libraries/bootstrap5/css/bootstrap.min.css">
-
    <!-- Custom External CSS Linking -->
+   <link rel="stylesheet" href="assets/css/modal.css">
    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
    <!-- Header Section -->
-   <header
-      class="header-background header-background-mobile d-flex justify-content-between align-items-center sticky-top">
-      <div class="container d-flex justify-content-between">
-         <a href="index.html" class="text-decoration-none fs-4 title-text-game-page go-to-home-link">
-            <span class="d-none d-md-block">ROCK - PAPER - SCISSORS - LIZARD - SPOCK</span><span
-               class="d-block d-md-none">Home</span>
+   <header class="header-background header-background-mobile">
+      <div class="container header-inside">
+         <a href="index.html" class="title-text-game-page">
+            <span class="display-none display-large-block">ROCK - PAPER - SCISSORS - LIZARD - SPOCK</span><span
+               class="display-block display-large-none">Home</span>
          </a>
 
          <!-- Difficulty Easy and Hard Select Section -->
-         <div class="d-flex align-items-center justify-content-end">
-            <div class="form-check form-switch align-items-center d-flex">
-               <input class="form-check-input  shadow-sm" type="radio" id="difficultyradiochecked" name="difficulty"
-                  value="easy" checked>
-               <label class="form-check-label ms-2 text-white fs-5 fw-bold text-shadow"
-                  for="difficultyradiochecked">Easy</label>
+         <div class="difficulty-section">
+            <div class="radio-check">
+               <input class="radio-check-input" type="radio" id="difficultyradiochecked" name="difficulty" value="easy"
+                  checked>
+               <span class="slider"></span>
+               <label class="radio-label" for="difficultyradiochecked">Easy</label>
             </div>
-            <span class="mx-2 mx-md-4"></span>
-            <div class="form-check form-switch align-items-center d-flex">
-               <input class="form-check-input shadow-sm" type="radio" id="difficultyradiounchecked" name="difficulty"
+            <div class="radio-check">
+               <input class="radio-check-input" type="radio" id="difficultyradiounchecked" name="difficulty"
                   value="hard">
-               <label class="form-check-label ms-2 text-white fs-5 fw-bold text-shadow"
-                  for="difficultyradiounchecked">Hard</label>
+               <span class="slider"></span>
+               <label class="radio-label" for="difficultyradiounchecked">Hard</label>
             </div>
          </div>
       </div>
    </header>
 
    <!-- Main Section -->
-   <main class="container py-2 py-md-5">
-      <div class="pb-5 text-white">
-         <div class="row row-cols-2 row-cols-md-3">
-
+   <main class="container">
+      <div>
+         <div class="row-gamepage-only">
             <!-- User Score and Selected Item Section -->
-            <div class="col-6 order-1 col-md-2 order-md-1">
+            <div class="user-score-col order-second">
                <div class="text-center">
                   <p class="score-text">SCORE</p>
                   <p class="score-no-text" id="user-score">0</p>
                </div>
-               <div class="d-flex justify-content-center mt-2 position-relative">
+               <div class="outer-box-cover">
                   <div class="outer-box" id="choice-outer-box-user">
                      <!-- outer-box-win -->
                      <div class="inner-box">
@@ -67,30 +62,29 @@
             </div>
 
             <!-- Rounds COunt and Win Lose Info Section -->
-            <div class="col-12 col-md-8 order-3 order-md-2">
-               <div class="d-flex justify-content-center align-items-center flex-column mt-4">
-                  <div>
+            <div class="rounds-col order-third order-large-second">
+               <div class="rounds-box">
+                  <div class="width-full">
                      <button class="btn game-big-button rounds-button-mobile">
-                        <span class="gradient-text-design px-5 px-md-0">
+                        <span class="gradient-text-design">
                            ROUNDS : <span id="game-rounds">0</span>
                         </span>
                      </button>
                   </div>
-                  <div class="py-md-3 py-1"></div>
-                  <div class="mb-4 mb-md-0">
-                     <span class="mb-0 game-result-text" id="game-result">Lizard Beats Spock ! </span>
-                     <span class="mb-0 win-text ms-md-2 text-center" id="win-or-lose">YOU WIN</span>
+                  <div>
+                     <span class="game-result-text" id="game-result"> </span>
+                     <span class="win-text text-center" id="win-or-lose"></span>
                   </div>
                </div>
             </div>
 
             <!-- Computer Score and Select Section -->
-            <div class="col-6 col-md-2 order-1 order-md-3">
+            <div class="computer-score-col order-first order-large-third">
                <div class="text-center">
                   <p class="score-text">SCORE</p>
                   <p class="score-no-text" id="computer-score">0</p>
                </div>
-               <div class="d-flex justify-content-center mt-2 position-relative">
+               <div class="outer-box-cover">
                   <div class="outer-box" id="choice-outer-box-computer">
                      <!-- outer-box-lose -->
                      <div class="inner-box">
@@ -104,162 +98,162 @@
             </div>
          </div>
 
-         <div class="py-md-4 mt-md-3"></div>
 
          <!-- Select your choice with arrow section -->
-         <div class="row row-cols-3 row-cols-md-6 d-flex justify-content-center position-relative gy-3">
+         <div class="row-select-choice">
             <div class="absolute-text-design">
                <div class="arrow-inside">
                   <p class="mb-1 select-choice-text">SELECT YOUR CHOICE</p>
                   <img src="assets/images/arrow-down.svg" alt="user design for ux" class="arrow-image">
                </div>
             </div>
-            <div class="col col-md-1 d-flex flex-column align-items-center">
+            <div class="choice-column-smalls choice-column">
                <div class="outer-box-small rockbtn">
                   <div class="inner-box-small">
                      <img class="small-image" src="assets/images/gamehandicons/hand-rock.svg" alt="player choosed icon">
                   </div>
                </div>
-               <p class="mb-0 mt-1 text-center pe-1 fw-normal">Rock</p>
+               <p class="text-center">Rock</p>
             </div>
-            <div class="col col-md-1 d-flex flex-column align-items-center">
+            <div class="choice-column-smalls choice-column">
                <div class="outer-box-small paperbtn">
                   <div class="inner-box-small">
                      <img class="small-image" src="assets/images/gamehandicons/hand-paper.svg"
                         alt="player choosed icon">
                   </div>
                </div>
-               <p class="mb-0 mt-1 text-center pe-1 fw-normal">Paper</p>
+               <p class="text-center">Paper</p>
             </div>
-            <div class="col col-md-1 d-flex flex-column align-items-center">
+            <div class="choice-column-smalls choice-column">
                <div class="outer-box-small scissorbtn">
                   <div class="inner-box-small">
                      <img class="small-image" src="assets/images/gamehandicons/hand-scissors.svg"
                         alt="player choosed icon">
                   </div>
                </div>
-               <p class="mb-0 mt-1 text-center pe-1 fw-normal">Scissor</p>
+               <p class="text-center">Scissor</p>
             </div>
-            <div class="col col-md-1 d-flex flex-column align-items-center">
+            <div class="choice-column-smalls choice-column">
                <div class="outer-box-small lizardbtn">
                   <div class="inner-box-small">
                      <img class="small-image" src="assets/images/gamehandicons/hand-lizard.svg"
                         alt="player choosed icon">
                   </div>
                </div>
-               <p class="mb-0 mt-1 text-center pe-1 fw-normal">Lizard</p>
+               <p class="text-center">Lizard</p>
             </div>
-            <div class="col col-md-1 d-flex flex-column align-items-center">
+            <div class="choice-column-smalls choice-column">
                <div class="outer-box-small spockbtn">
                   <div class="inner-box-small">
                      <img class="small-image" src="assets/images/gamehandicons/hand-spock.svg"
                         alt="player choosed icon">
                   </div>
                </div>
-               <p class="mb-0 mt-1 text-center pe-1 fw-normal">Spock</p>
+               <p class="text-center">Spock</p>
             </div>
-            <div
-               class=" mt-5 mt-md-0 col-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end order-last order-md-6">
+            <div class="choice-column-larger">
                <!-- Button trigger modal -->
-               <button class="btn btn-light btn-sm fw-bold py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               <button class="btn btn-white" id="modal-btn">
                   VIEW RULES
                </button>
 
                <!-- Modal For Rules -->
-               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
+               <div class="modal hide" id="modal-box">
                   <div class="modal-dialog modal-dialog-centered">
                      <div class="modal-content">
                         <div class="modal-header">
-                           <h5 class="modal-title text-dark" id="exampleModalLabel">Game Rules <span
-                                 class="text-danger">*</span> [ First to Score 10 Will
+                           <h5 class="modal-title">Game Rules <span class="text-red">*</span> [ First to Score 10 Will
                               Win ] </h5>
-                           <button type="button" class="btn btn-close" data-bs-dismiss="modal"
-                              aria-label="Close"></button>
+                           <button type="button" class="btn btn-close" id="modal-close-btn"><svg
+                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-x-lg" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd"
+                                    d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                                 <path fill-rule="evenodd"
+                                    d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                              </svg></button>
                         </div>
                         <div class="modal-body p-0">
                            <div class="py-5 px-3 bg-blue">
-                              <div class="row row-cols-1 row-cols-md-2">
-                                 <div class="col">
-                                    <div class="d-flex justify-content-center align-items-center">
-                                       <img src="assets/images/heroimage.png" alt="rules image" class="img-fluid">
+                              <div class="row">
+                                 <div class="column">
+                                    <div>
+                                       <img src="assets/images/heroimage.png" alt="rules image" class="img-responsive">
                                     </div>
                                  </div>
-                                 <div class="col">
-                                    <div class="pt-3 px-md-5 fs-5">
-
-                                       <!-- Rules List -->
-                                       <ul class="list-group">
-                                          <li class="list-group-item">
+                                 <div class="column1">
+                                    <div>
+                                       <ul class="group-of-list">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Rock Beats Scissors
                                              <img src="assets/images/gamehandicons/hand-scissors.svg"
                                                 alt="hand scissors" width="30" height="30"
-                                                class="bg-danger rounded-circle p-1">
+                                                class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Rock Beats Lizard
                                              <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand lizard"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Lizard Beats Spock
                                              <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Lizard Beats Paper
                                              <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Paper Beats Rock
                                              <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand paper"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Paper Beats Spock
                                              <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand spock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Spock Beats Scissors
                                              <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-spock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Spock Beats Rock
                                              <img src="assets/images/gamehandicons/hand-rock.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Scissors Beats Paper
                                              <img src="assets/images/gamehandicons/hand-paper.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
-                                          <li class="list-group-item">
+                                          <li class="list-item">
                                              <img src="assets/images/gamehandicons/hand-scissors.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-success rounded-circle p-1">
+                                                width="30" height="30" class="bg-green circle-round rule-img">
                                              Scissors Beats Lizard
                                              <img src="assets/images/gamehandicons/hand-lizard.svg" alt="hand rock"
-                                                width="30" height="30" class="bg-danger rounded-circle p-1">
+                                                width="30" height="30" class="bg-red circle-round rule-img">
                                           </li>
                                        </ul>
                                     </div>
@@ -270,6 +264,7 @@
                      </div>
                   </div>
                </div>
+
             </div>
          </div>
       </div>
@@ -277,13 +272,8 @@
 
 
    <!-- Including Main Game Javascript File -->
+   <script src="assets/js/modal.js"></script>
    <script src="assets/js/game.js"></script>
-
-   <!-- Including Popper JS CDN for some functionality of Bootstrap Like Modal and Popups -->
-   <script src="https://unpkg.com/@popperjs/core@2"></script>
-
-   <!-- Including Minified Javascript of Bootstrap -->
-   <script src="libraries/bootstrap5/js/bootstrap.min.js"></script>
 </body>
 
 </html>

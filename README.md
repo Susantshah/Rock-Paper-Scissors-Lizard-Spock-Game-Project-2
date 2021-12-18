@@ -55,7 +55,7 @@ In this section, user can select their choice and after that computer randomly m
 
 After the game is completed and between the workflow, i have made good enoght testing from real users and online testing softwares to minimize run time errors.
 
-One of the problem i got into while doing was, i have implemented checkbox instead of radio button in easy and hard mode select section. While using checkbox user can select both easy and hard mode of game at once,which doesnot makes sense. After some research i found out that i need to use radiobutton with same name attribute to have the functionality i desire. Some screenshots captured during test phase are below :
+One of the problem i got into while doing was, i have implemented checkbox instead of radio button in easy and hard mode select section. While using checkbox user can select both easy and hard mode of game at once,which doesnot makes sense. After some research i found out that i need to use radio button with same name attribute to have the functionality I desire. Some screenshots captured during test phase are below :
 
 ![Checkbox](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/using-checkbox-error.png)
 
@@ -73,7 +73,7 @@ I came accross a error in my html while validating HTML which was i used "px" as
 
 ![Error4](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/px-error4.jpg)
 
-Another error I came across validator testing was on role="switch" on radiobutton inputs in gamepage html, which was default from Bootstrap Library. I solved it by removing role attribute from the radiobutton input.Some screenshots of this error is attached below :
+Another error I came across validator testing was on role="switch" on radio button inputs in gamepage.html. I solved it by removing role attribute from the radiobutton input.Some screenshots of this error is attached below :
 
 ![Error4](https://susantshah.github.io/rock-paper-scissors-lizard-spock-game-project2/documentation-assets/img/errors/role-error.jpg)
 
@@ -118,10 +118,6 @@ For providing structure to the game - [HTML5](https://en.wikipedia.org/wiki/HTML
 For all styling and designs - [CSS3](https://en.wikipedia.org/wiki/CSS3)
 
 For Interacting with DOM and Functionalities - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-
-For Responsive Design and grid System - [Bootstrap](https://getbootstrap.com/)
-
-As a dependency for Bootstrap - [Popper](https://popper.js.org/)
 
 ## Credits
 
