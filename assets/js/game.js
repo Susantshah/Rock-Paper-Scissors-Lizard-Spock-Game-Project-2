@@ -18,7 +18,7 @@ var playerChoiceScissorButton = document.querySelector(".scissorbtn");
 var playerChoiceLizardButton = document.querySelector(".lizardbtn");
 var playerChoiceSpockButton = document.querySelector(".spockbtn");
 
-var choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+var choices = ["Rock", "Paper", "Scissor", "Lizard", "Spock"];
 var playerSelectedItem = document.getElementById("player-choice");
 var computerSelectedItem = document.getElementById("computer-choice");
 var playerOuterBox = document.getElementById("choice-outer-box-user");
@@ -58,7 +58,7 @@ function incrementUserScore() {
   userScoreDiv.innerHTML = userScore;
 
   // User Win by scoring 10 first
-  if (computerScore == 10) {
+  if (userScore == 10) {
     alert("Congrats! You Have Won the Game by reaching to Score : 10 First .");
     resetGame(); // reset game
   }
