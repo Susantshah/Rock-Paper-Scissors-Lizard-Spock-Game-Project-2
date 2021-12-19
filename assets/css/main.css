@@ -21,86 +21,9 @@ body {
   background: #141539;
 }
 
+/* Main Container */
 .container {
   padding: 1rem;
-}
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-}
-.row-gamepage-only {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  flex-wrap: wrap;
-}
-.user-score-col {
-  flex: 0 0 auto;
-  width: 16.66666667%;
-}
-.rounds-col {
-  flex: 0 0 auto;
-  width: 66.66666667%;
-}
-.computer-score-col {
-  flex: 0 0 auto;
-  width: 16.66666667%;
-}
-.row-select-choice {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  color: white;
-  margin-top: 3rem;
-}
-.column-1 {
-  width: 100%;
-}
-.btn {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  background-color: transparent;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-}
-.btn-close {
-  box-sizing: content-box;
-  width: 1em;
-  height: 1em;
-  padding: 0.25em 0.25em;
-  color: rgb(255, 0, 0);
-  border-radius: 20px;
-  border: 1px solid red;
-}
-.btn-white {
-  box-sizing: content-box;
-  padding: 1rem;
-  color: rgb(0, 0, 0);
-  background: white;
-  border-radius: 5px;
-  border: none;
-}
-.play-game-btn {
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 3rem;
-}
-.position-relative {
-  position: relative;
-}
-.position-absolute {
-  position: absolute;
 }
 /* Top navbar */
 .header-background {
@@ -114,20 +37,123 @@ body {
   left: 0;
   z-index: 1998;
 }
+/* Main Header Inside Div for alignment */
 .header-inside {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+/* Homepage Row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+/* Gamepage Main Part */
+.row-gamepage-only {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+/* Gamepage row -> user column */
+.user-score-col {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+/* Gamepage row -> centered rounds and result column */
+.rounds-col {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+/* Gamepage row -> computer column */
+.computer-score-col {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+/* User choice select row */
+.row-select-choice {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  color: white;
+  margin-top: 3rem;
+}
+.choice-column-smalls {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+.choice-column-larger {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.column-1 {
+  width: 100%;
+}
+/* Basic Button Design */
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+/* Relative Positioning */
+.position-relative {
+  position: relative;
+}
+/* Absolute Positioning */
+.position-absolute {
+  position: absolute;
+}
+/* Modal Close Button */
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: rgb(255, 0, 0);
+  border-radius: 20px;
+  border: 1px solid red;
+}
+/* Rules button at gamepage */
+.btn-white {
+  box-sizing: content-box;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  background: white;
+  border-radius: 5px;
+  border: none;
+}
+/* Main play game button design */
+.play-game-btn {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+/* Difficulty select section main div */
 .difficulty-section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+/* Main section */
 .main-section {
   padding: 5rem 0;
 }
-
 /* Main Title */
 .title-text {
   font-style: normal;
@@ -195,6 +221,36 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* Switch check box */
+.radio-check {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-left: 2.5em;
+  margin-left: 0.4rem;
+}
+
+/* Label for easy and hard mode checkbox */
+.radio-label {
+  margin-top: 2px;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  margin-left: 0.5rem !important;
+  text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  color: white;
+}
+/* Green Background */
+.bg-green {
+  background-color: #198754;
+}
+/* Red Background */
+.bg-red {
+  background-color: #dc3545;
+}
+/* Border circular design */
+.circle-round {
+  border-radius: 50%;
+}
 
 /* Radiobutton input for difficulty easy and hard */
 .radio-check-input {
@@ -234,30 +290,14 @@ body {
   box-shadow: none;
   border-color: green;
 }
+/* Display block in large screens */
 .display-large-block {
   display: block;
 }
+/* Display none in large screen */
 .display-large-none {
   display: none;
 }
-.radio-check {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  padding-left: 2.5em;
-  margin-left: 0.4rem;
-}
-
-/* Label for easy and hard mode checkbox */
-.radio-label {
-  margin-top: 2px;
-  font-weight: 700 !important;
-  font-size: 1.25rem !important;
-  margin-left: 0.5rem !important;
-  text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  color: white;
-}
-
 /* Score text */
 .score-text {
   font-family: Montserrat;
@@ -268,16 +308,6 @@ body {
   color: #ffffff;
   margin-bottom: 0;
 }
-.bg-green {
-  background-color: #198754;
-}
-.bg-red {
-  background-color: #dc3545;
-}
-.circle-round {
-  border-radius: 50%;
-}
-
 /* Score no text design */
 .score-no-text {
   font-family: Montserrat;
@@ -420,10 +450,12 @@ body {
 .text-white {
   color: white;
 }
+/* Keeping image inside viewport to remove horizontal scrolling */
 .img-responsive {
   max-width: 100%;
   height: auto;
 }
+/* No of rounds section outer box div */
 .rounds-box {
   display: flex;
   justify-content: center;
@@ -431,12 +463,15 @@ body {
   flex-direction: column;
   margin-top: 2rem;
 }
+/* Text alignment to center */
 .text-center {
   text-align: center;
 }
+/* order of flex column to 2 in large screens */
 .order-large-second {
   order: 2;
 }
+/* order of flex column to 3 in large screens */
 .order-large-third {
   order: 3;
 }
@@ -447,17 +482,6 @@ apply the css inside the block
 whenever the screen size is less than 700px 
 especially for mobile
 */
-.choice-column-smalls {
-  flex: 0 0 auto;
-  width: 8.33333333%;
-}
-.choice-column-larger {
-  flex: 0 0 auto;
-  width: 58.33333333%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
 @media only screen and (max-width: 700px) {
   .choice-column {
     padding: 1rem;
